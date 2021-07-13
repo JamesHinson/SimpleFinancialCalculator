@@ -9,7 +9,7 @@ If you are reading this, then how did you get here? I'm just a high school stude
 */
 
 
-int main() {
+void compounding_interest() {
 
 	/* Initializing variables
 	P - principal amount to be invested (in USD)
@@ -18,22 +18,22 @@ int main() {
 	n - frequency of investment per period
 	*/
 
-	double P, r, t, n; 
+	double P, r, t, n;
 
 	cout << "What is your starting amount? (USD) \n"; // Asks for the principal amount being invested (in USD)
-	cin >>  P;
+	cin >> P;
 	cout << endl;
 
 	cout << "What is the interest rate? (Whole numbers - no characters) \n"; // Asks for interest rate in whole numbers
-	cin >>  r;
+	cin >> r;
 	cout << endl;
 
 	cout << "How many years will you be investing? \n"; // Asks number of years money will be invested
-	cin >>  t;
+	cin >> t;
 	cout << endl;
 
 	cout << "How frequently will you be investing in " << t << " years?" << endl << "(Enter '1' for annually, '12' for monthly, '52.1429' for weekly, or '365' for daily) \n"; // Asks for frequency of investment per period
-	cin >>  n;
+	cin >> n;
 	cout << endl;
 
 	double decimalPercent = r / 100; // Converts interest rate to decimal value for ease of use
@@ -45,4 +45,10 @@ int main() {
 	cout << "Your ending value will be $" << compounded_principal << " with a Principal amount of $" << P << ", an interest rate of " << r << " percent, a timeframe of " << t << " year(s), and a frequency of " << n << " times per " << t << " year(s)" << endl;;
 
 	// Informs user of final value, along with what they would be putting in for their Principal values, interest rate, timeframe, and frequency
+}
+
+
+int main() {
+
+	compounding_interest();
 }
